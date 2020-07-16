@@ -46,8 +46,10 @@ namespace Honzel_Family_Website.Models.Recipe
             this.Ingredients = Ingredients;
             this.PrepTime = PrepTime;
             this.CookTime = CookTime;
-            this.TotalTime = PrepTime.Add(CookTime);
+            this.TotalTime = TotalTime;
             this.Servings = Servings;
         }
+
+        public RecipeModel() { }
     }
 }
