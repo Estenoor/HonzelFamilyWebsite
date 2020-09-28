@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Honzel_Family_Website.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200716172026_RecipeModels")]
-    partial class RecipeModels
+    [Migration("20200921143839_InitialMigrationWithUpdatedRecipeModel")]
+    partial class InitialMigrationWithUpdatedRecipeModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -94,20 +94,20 @@ namespace Honzel_Family_Website.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<TimeSpan>("CookTime")
-                        .HasColumnType("time");
+                    b.Property<int>("CookTime")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("PrepTime")
-                        .HasColumnType("time");
+                    b.Property<int>("PrepTime")
+                        .HasColumnType("int");
 
                     b.Property<int>("Servings")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("TotalTime")
-                        .HasColumnType("time");
+                    b.Property<int>("TotalTime")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 

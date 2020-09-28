@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200921142633_fixedRecipeModelToStoreTimeAsInt.cs" />
+    <Compile Remove="Migrations\20200921142633_fixedRecipeModelToStoreTimeAsInt.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

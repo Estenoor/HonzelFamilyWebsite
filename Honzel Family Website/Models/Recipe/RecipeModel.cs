@@ -29,22 +29,21 @@ namespace Honzel_Family_Website.Models.Recipe
         public List<InstructionModel> Instructions { get; set; }
 
         [DisplayName("Prep Time")]
-        public TimeSpan PrepTime { get; set; }
+        public int PrepTime { get; set; }
 
         [DisplayName("Cook Time")]
-        public TimeSpan CookTime { get; set; }
+        public int CookTime { get; set; }
 
         [DisplayName("Total Time")]
-        public TimeSpan TotalTime { get; set; }
+        public int TotalTime { get; set; }
 
         [DisplayName("Servings")]
         public int Servings { get; set; }
 
         public RecipeModel(int ID, string Name, List<QuisineModel> Quisine, 
                            List<IngredientModel> Ingredients, 
-                           List<InstructionModel> Instructions, TimeSpan PrepTime, 
-                           TimeSpan CookTime, TimeSpan TotalTime, 
-                           int Servings)
+                           List<InstructionModel> Instructions, int PrepTime, 
+                           int CookTime, int TotalTime, int Servings)
         {
             this.ID = ID;
             this.Name = Name;

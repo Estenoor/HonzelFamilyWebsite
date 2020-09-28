@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Honzel_Family_Website.Migrations
 {
-    public partial class RecipeModels : Migration
+    public partial class InitialMigrationWithUpdatedRecipeModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,9 +13,9 @@ namespace Honzel_Family_Website.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
-                    PrepTime = table.Column<TimeSpan>(nullable: false),
-                    CookTime = table.Column<TimeSpan>(nullable: false),
-                    TotalTime = table.Column<TimeSpan>(nullable: false),
+                    PrepTime = table.Column<int>(nullable: false),
+                    CookTime = table.Column<int>(nullable: false),
+                    TotalTime = table.Column<int>(nullable: false),
                     Servings = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
